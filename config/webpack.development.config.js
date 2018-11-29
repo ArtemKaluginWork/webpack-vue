@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const resolve = relativePath => path.resolve(__dirname, '..', relativePath);
+
 
 module.exports = {
   mode: 'development',
@@ -55,6 +57,9 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    })
   ],
   resolve: {
     alias: {

@@ -20,7 +20,7 @@
 </script>
 <style>
     .text {
-        color:red;
+        color: red;
         font-size: 2rem;
     }
     .btn {

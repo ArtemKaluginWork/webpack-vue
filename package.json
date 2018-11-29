@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --color --progress --config config/webpack.config.js"
+    "start": "webpack-dev-server  --color --progress --config config/webpack.development.config.js",
+    "build": "webpack --color --progress --config config/webpack.production.config.js"
   },
   "author": "Artem Kalugin",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.4.5",
     "vue-loader": "^15.4.2",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
